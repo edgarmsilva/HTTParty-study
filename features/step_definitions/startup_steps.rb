@@ -21,7 +21,6 @@ Então("a API irá retornar os dados do cadastro da startup respondendo o códig
     puts "Cidade            : #{@response["cidade"]}"
 
     $id = @response["id"]
-    puts @id
 
 end
 
@@ -41,7 +40,6 @@ Então("a API irá retornar os dados do cadastro da startup correspondente respo
     puts "Conta             : #{@get["conta"]}"
     puts "Cidade            : #{@get["cidade"]}"
     puts "Status Code       : #{@get.code}"
-    
     
 end
 
@@ -89,5 +87,5 @@ Então("a API irá retornar os dados da exclusão respondendo o código {int}") 
     puts "------------------------------------------"
     puts "A Conta #{$id}, foi deletada com sucesso."
     puts "------------------------------------------"
-    
+
 end
