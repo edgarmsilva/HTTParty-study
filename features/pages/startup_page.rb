@@ -6,10 +6,11 @@ class Startup
     def initialize(body)
         @options = {:body => body}
         @options2 = {}
-        # @options3 = {
-        #     "nome": "TesteEd Alterado",
-        #     "cidade": "Recife Alteado"
-        # }
+        @options3 = {:body => {
+                            "nome": "TesteEd Alterado",
+                            "cidade": "Recife Alterado"
+                            }
+                    }
        
     end
 
@@ -23,12 +24,12 @@ class Startup
     end
 
     def putStartup(id)
-        self.class.put("/startup/#{id}", @options)
+        self.class.put("/startup/#{id}", @options3)
         
     end
 
-    def deleteStartup
-        self.class.delete("/startup/#{id}", @options2)
+    def deleteStartup(id)
+        self.class.delete("/startup/#{id}", @options)
         
     end
 

@@ -8,6 +8,13 @@ Before '@startup' do
         "cidade": @cidade
     }
 
+    newbody = {
+        "nome": "TesteEd002",
+        "cidade": "Recife002"
+    }
+
+    
+
     @body = JSON.generate(body)
 
     @startup = Startup.new(@body)
